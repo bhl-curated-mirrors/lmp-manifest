@@ -2,20 +2,21 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="bitbake" revision="ee090484cc25d760b8c20f18add17b5eff485b40"/>
+  <project name="bitbake" revision="master"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="7a8266badd8803425fa8c27c94c07d6d90ba7673"/>
-  <project name="meta-clang" path="layers/meta-clang" revision="312ff1c39b1bf5d35c0321e873417eb013cea477"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="5a6f7925bd2b885955c942573f70a5594f231563"/>
-  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="0ef7e7a0379f13045c2c291740dfebbeed9efd4d"/>
-  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="1a6746a81da4d5bf2e5640fd2fa8f3ea453d40bf"/>
-  <project name="meta-security" path="layers/meta-security" revision="353078bc06c8b471736daab6ed193e30d533d1f1"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="6c4feab2db70cb0c8ddce7e18dc7b851ad475b32"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="cb2bc17e96552cdfc141d27bd9f4dbd95a872846"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="8a502301209ef144932ef5071c1a9b738db23270"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="main-next"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="master"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="master"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="kirkstone/go"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="kirkstone/rust"/>
+  <project name="meta-security" path="layers/meta-security" revision="master"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="master"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="master"/>
+  <project name="openembedded-core" path="layers/openembedded-core" remote="quaresmajose" revision="next"/>
 </manifest>
